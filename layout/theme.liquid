@@ -15,7 +15,26 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
+    
 
+
+     <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i' | asset_url | stylesheet_tag }}
+
+  <!-- Vendor CSS Files -->
+   {{ 'aos.css' | asset_url | stylesheet_tag }}
+   {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
+ {{ 'bootstrap-icons.css' | asset_url | stylesheet_tag }}
+   {{ 'boxicons.min.css' | asset_url | stylesheet_tag }}
+   {{ 'glightbox.min.css' | asset_url | stylesheet_tag }}
+  {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+
+  <!-- Template Main CSS File -->
+  {{ 'style.css' | asset_url | stylesheet_tag }}
+ {{ 'base.css' | asset_url | stylesheet_tag }}
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -257,5 +276,16 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    {{'aos.js' | asset_url | script_tag }}
+    {{'bootstrap.bundle.min.js' | asset_url | script_tag }}
+   {{'glightbox.min.js' | asset_url | script_tag }}
+   {{'isotope.pkgd.min.js' | asset_url | script_tag }}
+   {{'swiper-bundle.min.js' | asset_url | script_tag }}
+   {{'validate.js' | asset_url | script_tag }}
+
+  <!-- Template Main JS File -->
+   {{'main.js' | asset_url | script_tag }}
+
   </body>
 </html>
