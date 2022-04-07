@@ -20,12 +20,12 @@
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Country:</label>
-    <input type="text" name="customer_country" class="form-control" id="exampleInputPassword1" placeholder="Country">
+    <input type="text" name="customer_country" class="form-control" id="customer_country" placeholder="Country">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Fav Pet:</label>
-    <input type="text" name="customer_pet" class="form-control" id="exampleInputPassword1" placeholder="Pet Name">
-    <input type="hidden" name="customer_id" value="{{customer.id}}">
+    <input type="text" name="customer_pet" class="form-control" id="customer_pet" placeholder="Pet Name">
+    <input type="hidden" id="customer_id" value="{{customer.id}}">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
