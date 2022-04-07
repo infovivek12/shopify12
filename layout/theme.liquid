@@ -304,10 +304,21 @@
     
     
     <script>
-     var get = document.getElementById("wvt_post");
-   var gettext = get.textContent;
-      console.log(gettext);
+  let postbtn= document.getElementById("cus_form");
+postbtn.addEventListener('click',postclickHandler)
+
+function postclickHandler(){
+  // var get = document.getElementById("wvt_post");
+  // var gettext = get.textContent;
+     //console.log(gettext);
+
+     var get_age = document.getElementById("customer_age").value;
+     var get_country = document.getElementById("customer_country").value;
+     var get_pet = document.getElementById("customer_pet").value;
+     var get_customerId = document.getElementById("customer_id").value;
+}
       
+      console.log(get_age);
     </script>
     
     
