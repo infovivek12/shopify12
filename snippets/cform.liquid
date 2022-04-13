@@ -26,7 +26,8 @@ $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
       valArr.push(field.value);
     });
     
-    console.log(valArr);
+    vtx_fnc.apply(this, valArr);
+
     
     
     
