@@ -18,4 +18,8 @@ $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
     e.preventDefault(); $(this).parent('div').parent('div').remove(); x--;
     })
 });
+  $('#nm_wvt').submit(function() {
+  console.log($(this).serialize());
+  return false;
+});
 </script>
