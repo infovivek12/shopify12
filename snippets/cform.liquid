@@ -25,8 +25,9 @@ $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
      $.each(getform, function(i, field){
       valArr.push(field.value);
     });
-    
-    vtx_fnc.apply(this, valArr);
+    let Val_string = valArr.toString();
+console.log(Val_string);
+    //vtx_fnc.apply(this, valArr);
 
     
     
