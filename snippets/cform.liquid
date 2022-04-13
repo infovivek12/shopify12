@@ -48,9 +48,9 @@ function add() {
     reqs.appendChild(br);
 }
    const check = (e) => {
-    const form = new FormData(e.target);
-    const formula = form.get("formula");
-    console.log(formula);
+  const element = document.getElementByID('#nm')
+const data = new FormData(element)
+const form = Array.from(data.entries())
     return false
 };
 </script>
