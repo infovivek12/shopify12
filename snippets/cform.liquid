@@ -1,0 +1,31 @@
+
+<script>
+   $(document).ready(function(){
+
+// add input fields dynamically
+var NewInputField=`<div class="new-input">
+<input type="text" name='mobile[]' placeholder="Mobile Number"><button class="remove-input">X</button>
+</div>`;
+$(document).on('click','.add-new',function(e){
+  e.preventDefault();
+$(this).parents('.default-input').find('.new-input-area').append(NewInputField);
+});
+
+// remove input fields dynamically
+$(document).on('click','.remove-input',function(e){
+  e.preventDefault();
+$(this).parent('.new-input').remove();
+})
+
+// add input field on pressing Enter Key
+$(document).keydown(function (event) { 
+     if (event.which == 13) { 
+         event.preventDefault();
+         $('.add-new').click(); 
+         
+     } 
+    });
+
+
+});
+</script>
