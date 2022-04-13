@@ -1,52 +1,24 @@
 
 <script>
-function removeElement(e) {
-    let button = e.target;
-    let field = button.previousSibling;
-    let div = button.parentElement;
-    let br = button.nextSibling;
-    div.removeChild(button);
-    div.removeChild(field);
-    div.removeChild(br);
+$(document).ready(function() {
+var max_fields      = 10; //maximum input boxes allowed
+var wrapper   		= $(".input_fields_wrap"); //Fields wrapper
+var add_button      = $(".add_field_button"); //Add button ID
 
-    let allElements = document.getElementById("reqs");
-    let inputs = allElements.getElementsByTagName("input");
-    for(i=0;i<inputs.length;i++){
-        inputs[i].setAttribute('id', 'reqs' + (i+1));
-        inputs[i].setAttribute('value', (i+1));
-        inputs[i].nextSibling.setAttribute('id', 'reqsr' + (i+1));
+var x = 1; //initlal text box count
+$(add_button).click(function(e){ //on add input button click
+e.preventDefault();
+    if(x < max_fields){ //max input box allowed
+        x++; //text box increment
+        $(wrapper).append('<div class="input-group mb-3"><input placeholder="Enter Price" type="text" name="mytext[]" class="form-control"><div class="input-group-append"><button class="btn btn-outline-danger remove_field" type="button">Remove</button></div></div>'); //add input box
     }
-}
+});
 
-function add() {
-    let allElements = document.getElementById("reqs");
-    let reqs_id = allElements.getElementsByTagName("input").length;
-    reqs_id++;
-
-    //create textbox
-    let input = document.createElement('input');
-    input.type = "text";
-    input.setAttribute("class", "w3-input w3-border");
-    input.setAttribute('id', 'reqs' + reqs_id);
-    input.setAttribute('value', reqs_id);
-    let reqs = document.getElementById("reqs");
-
-    //create remove button
-    let remove = document.createElement('button');
-    remove.setAttribute('id', 'reqsr' + reqs_id);
-    remove.onclick = function(e) {
-        removeElement(e);
-    };
-    remove.setAttribute("type", "button");
-    remove.innerHTML = "Remove";
-
-    //append elements
-    reqs.appendChild(input);
-    reqs.appendChild(remove);
-    let br = document.createElement("br");
-    reqs.appendChild(br);
-}
-   $('#nm_wvt').submit(function() {
+$(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+    e.preventDefault(); $(this).parent('div').parent('div').remove(); x--;
+    })
+});
+  $('#nm_wvt').submit(function() {
   var getform=$(this).serializeArray();
     
      $.each(getform, function(i, field){
