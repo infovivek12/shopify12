@@ -26,7 +26,7 @@ $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
       valArr.push(field.value);
     });
     
-    let PetValue = valArr.toString();
+    const PetValue = valArr.toString();
     vtx_fnc.apply(this, PetValue);
 
     
