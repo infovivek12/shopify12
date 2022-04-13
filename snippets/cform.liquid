@@ -7,8 +7,9 @@ var NewInputField=`<div class="new-input">
 <input type="text" name='mobile[]' placeholder="Mobile Number"><button class="remove-input">X</button>
 </div>`;
 $(document).on('click','.add-new',function(e){
+   $('.default-input').find('.new-input-area').addClass("fineme");
   e.preventDefault();
-  $('.default-input').find('.new-input-area').addClass("fineme");
+ 
 
 $(this).parents('.default-input').find('.new-input-area').append(NewInputField);
 });
