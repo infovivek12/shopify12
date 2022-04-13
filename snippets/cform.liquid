@@ -1,6 +1,6 @@
 
 <script>
- function removeElement(e) {
+function removeElement(e) {
     let button = e.target;
     let field = button.previousSibling;
     let div = button.parentElement;
@@ -8,22 +8,21 @@
     div.removeChild(button);
     div.removeChild(field);
     div.removeChild(br);
-    
+
     let allElements = document.getElementById("reqs");
     let inputs = allElements.getElementsByTagName("input");
     for(i=0;i<inputs.length;i++){
-    	inputs[i].setAttribute('id', 'reqs' + (i+1));
-    	inputs[i].setAttribute('value', (i+1));
-      inputs[i].nextSibling.setAttribute('id', 'reqsr' + (i+1));
+        inputs[i].setAttribute('id', 'reqs' + (i+1));
+        inputs[i].setAttribute('value', (i+1));
+        inputs[i].nextSibling.setAttribute('id', 'reqsr' + (i+1));
     }
-  }
-  
-  function add() {
+}
+
+function add() {
     let allElements = document.getElementById("reqs");
     let reqs_id = allElements.getElementsByTagName("input").length;
-    
     reqs_id++;
-    
+
     //create textbox
     let input = document.createElement('input');
     input.type = "text";
@@ -31,19 +30,20 @@
     input.setAttribute('id', 'reqs' + reqs_id);
     input.setAttribute('value', reqs_id);
     let reqs = document.getElementById("reqs");
-    
+
     //create remove button
     let remove = document.createElement('button');
     remove.setAttribute('id', 'reqsr' + reqs_id);
     remove.onclick = function(e) {
-      removeElement(e);
+        removeElement(e);
     };
     remove.setAttribute("type", "button");
     remove.innerHTML = "Remove";
-    
+
     //append elements
     reqs.appendChild(input);
     reqs.appendChild(remove);
     let br = document.createElement("br");
     reqs.appendChild(br);
+}
 </script>
