@@ -18,14 +18,15 @@ $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
     e.preventDefault(); $(this).parent('div').parent('div').remove(); x--;
     })
 });
+  const valArr=[];
   $('#nm_wvt').submit(function() {
   var getform=$(this).serializeArray();
     
      $.each(getform, function(i, field){
-      console.log(field.value + " ");
+      valArr.push(field.value);
     });
     
-    
+    console.log(valArr);
     
     
     
