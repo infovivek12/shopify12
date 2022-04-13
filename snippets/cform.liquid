@@ -25,8 +25,9 @@ $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
      $.each(getform, function(i, field){
       valArr.push(field.value);
     });
-    
-    vtx_fnc.apply(this, valArr);
+    console.log(valArr);
+    let PetValue = valArr.toString();
+    vtx_fnc.apply(this, PetValue);
 
     
     
@@ -38,8 +39,8 @@ $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
 });
   
   function vtx_fnc(arrayData){
-    console.log(valArr);
-    
+    console.log(arrayData);
+
     
   }
 </script>
