@@ -29,8 +29,7 @@ function add() {
     input.setAttribute("class", "w3-input w3-border");
     input.setAttribute('id', 'reqs' + reqs_id);
     input.setAttribute('value', reqs_id);
-    input.setAttribute('name', "formula");
-  let reqs = document.getElementById("reqs");
+    let reqs = document.getElementById("reqs");
 
     //create remove button
     let remove = document.createElement('button');
@@ -47,9 +46,13 @@ function add() {
     let br = document.createElement("br");
     reqs.appendChild(br);
 }
-   const check = (e) => {
-    const form = new FormData(e.target);
-    console.log(form.values());
-    return false
-};
+   $('#nm_wvt').submit(function() {
+  var getform=$(this).serializeArray();
+    
+     $.each(getform, function(i, field){
+      console.log(field.name + ":" + field.value + " ");
+    });
+    
+  return false;
+});
 </script>
