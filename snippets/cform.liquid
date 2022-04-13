@@ -3,9 +3,9 @@
    $(document).ready(function(){
 
 // add input fields dynamically
-var NewInputField=`<div class="new-input">
+var NewInputField='<div class="new-input">
 <input type="text" name='mobile[]' placeholder="Mobile Number"><button class="remove-input">X</button>
-</div>`;
+</div>';
 $(document).on('click','.add-new',function(e){
   e.preventDefault();
 $(this).parents('.default-input').find('.new-input-area').append(NewInputField);
