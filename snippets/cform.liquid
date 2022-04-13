@@ -49,8 +49,7 @@ function add() {
 }
    const check = (e) => {
     const form = new FormData(e.target);
-    const formula = form.get("formula");
-    console.log(form);
+    form.values();
     return false
 };
 </script>
