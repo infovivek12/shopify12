@@ -26,8 +26,8 @@ $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
       valArr.push(field.value);
     });
     let Val_string = valArr.toString();
-console.log(Val_string);
-    //vtx_fnc.apply(this, valArr);
+
+    vtx_fnc(Val_string);
 
     
     
@@ -40,7 +40,7 @@ console.log(Val_string);
   
   function vtx_fnc(arrayData){
     console.log(arrayData);
-    let text = arrayData.toString();
+    
        //console.log(text)
     
   }
