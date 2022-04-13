@@ -19,7 +19,7 @@ $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
     })
 });
   $('#nm_wvt').submit(function() {
-  console.log($(this).serialize());
+  console.log($(this).serializeArray());
   return false;
 });
 </script>
