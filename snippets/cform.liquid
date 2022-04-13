@@ -25,6 +25,43 @@ $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
       console.log(field.value + " ");
     });
     
+     xhr.open('POST','/a/proxy/',true);
+  xhr.getResponseHeader('Content-type','application/json');
+
+  xhr.onprogress=function(){
+  console.log('On progress');
+
+  }
+
+ xhr.onload=function(){
+ if(this.status ===200){
+   console.log(this.responseText)
+   console.log("accept-200");
+   document.getElementById("formprogress").innerHTML = "Saved";
+ }
+ else{
+  document.getElementById("formprogress").innerHTML = "Something went wrong!";
+   console.log("Error response");
+ }
+
+}
+var obj = {
+  customer_age  : "vivek"
+
+}
+var Mjson = JSON.stringify(obj);
+
+//  param=`{"name":gettext,"age":"23"}` ;
+ xhr.send(Mjson);
+ console.log("WE ARE DONE !!!");  
+
+}
+    
+    
+    
+    
+    
+    
   return false;
 });
 </script>
