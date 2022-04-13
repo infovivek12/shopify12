@@ -8,7 +8,7 @@ var NewInputField=`<div class="new-input">
 </div>`;
 $(document).on('click','.add-new',function(e){
   e.preventDefault();
-  $(this).parents('.default-input').find('.new-input-area').addClass("fineme");
+  $('.default-input').find('.new-input-area').addClass("fineme");
 
 $(this).parents('.default-input').find('.new-input-area').append(NewInputField);
 });
