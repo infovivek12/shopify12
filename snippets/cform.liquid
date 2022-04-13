@@ -22,7 +22,7 @@ $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
   var getform=$(this).serializeArray();
     
      $.each(getform, function(i, field){
-      console.log(field.name + ":" + field.value + " ");
+      console.log(field.value + " ");
     });
     
   return false;
