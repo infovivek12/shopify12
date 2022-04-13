@@ -1,4 +1,56 @@
- <header id="header" class="d-flex align-items-center">
+<script>
+   var countBox = 2;
+var boxName = 0;
+
+function addInput()
+{
+    var boxLabel = "<label>Company " + countBox + "</label>";
+    var element = document.getElementById('my-content');
+    var html = '<div class="row">'+boxLabel+': <input type="text" id="'+boxName+'" value="'+boxName+'" " /></div>';
+    appendHtml(element, html);
+    countBox += 1;
+    boxName += 1;
+}
+
+function appendHtml(el, str) {
+    var div = document.createElement('div');
+    div.innerHTML = str;
+    while (div.children.length > 0) {
+        el.appendChild(div.children[0]);
+    }
+}
+</script>
+<input type="button" onclick="addInput()" value="Add new">
+<div id="my-content" class="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
       <h1 class="logo"><a href="index.html">Day</a></h1>
