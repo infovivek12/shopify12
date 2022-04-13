@@ -1,11 +1,12 @@
 
 <script>
-   $(document).ready(function(){
+$(document).ready(function(){
 
 // add input fields dynamically
-var NewInputField=`<div class="new-input"><input type="text" name='mobile[]' placeholder="Mobile Number"><button class="remove-input">X</button></div>`;
+var NewInputField=`<div class="new-input">
+<input type="text" name='mobile[]' placeholder="Mobile Number"><button class="remove-input">X</button>
+</div>`;
 $(document).on('click','.add-new',function(e){
-  console.log("dcl");
   e.preventDefault();
 $(this).parents('.default-input').find('.new-input-area').append(NewInputField);
 });
