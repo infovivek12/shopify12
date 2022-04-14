@@ -69,10 +69,10 @@ for(var i = 0; i < fields.length; i++) {
 }
   let petName_string = petnameArray.toString();
 
-  var customerId = document.getElementsByName("customer_id");
-  var customerId = customerId.value;
-  var storeId = document.getElementsByName("store_id");
-  var storeId =storeId.value;
+  var customerId = document.getElementsByName("customer_id")[0].value;;
+ 
+  var storeId = document.getElementsByName("store_id")[0].value;;
+
   console.log(petName_string);
   console.log(customerId);
   console.log(storeId);
