@@ -53,7 +53,21 @@
     reqs.appendChild(input);
     reqs.appendChild(remove);
   }
+// CODE FOR CASE IN FORM SUBMIT
+  
+  const form = document.getElementById("NM_Customermeta");
 
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    let reqBody = {};
+    Object.keys(form.elements).forEach(key => {
+        let element = form.elements[key];
+        if (element.type !== "submit") {
+            reqBody[element.name] = element.value;
+        }
+    });
+    submitForm(reqBody); // Call to function for form submission
+});
 </script>
 
     
