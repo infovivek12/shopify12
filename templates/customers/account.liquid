@@ -67,16 +67,16 @@ var fields = document.getElementsByName("petname[]");
 for(var i = 0; i < fields.length; i++) {
     petnameArray.push(fields[i].value);
 }
-  console.log(petnameArray);
-  let Val_string = petnameArray.toString();
-console.log(Val_string);
-    Object.keys(form.elements).forEach(key => {
-        let element = form.elements[key];
-        if (element.type !== "submit") {
-            reqBody[element.name] = element.value;
-        }
-    });
-   console.log(reqBody); // Call to function for form submission
+  let petName_string = petnameArray.toString();
+
+  var customerId = document.getElementsByName("customer_id");
+  var customerId = customerId.value;
+  var storeId = document.getElementsByName("store_id");
+  var storeId =storeId.value;
+  console.log(petName_string);
+  console.log(customerId);
+  console.log(storeId);
+  
 });
 </script>
 
