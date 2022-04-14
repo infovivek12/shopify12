@@ -11,10 +11,13 @@
     </a>
   </div>
 <!--     // FORM DATE-14-04-2-22 -->
+    <form id="NM_Customermeta" method="put">
     <div id="reqs">
   <h3 align="center"> Requirements </h3>
 </div>
-    
+      <input type="hidden" id="customer_id" value="{{customer.id}}">
+     <input type="hidden" id="store_id" value="{{shop.url | remove : 'https://'}}">
+    </form>
 <script>
   var reqs_id = 0;
 
