@@ -14,6 +14,7 @@
     <div id="reqs">
   <h3 align="center"> Requirements </h3>
 </div>
+    
 <script>
   var reqs_id = 0;
 
@@ -34,6 +35,7 @@
     input.setAttribute("class", "w3-input w3-border");
     input.setAttribute('id', 'reqs' + reqs_id);
     input.setAttribute('value', reqs_id);
+     input.setAttribute('name', "petname");
     var reqs = document.getElementById("reqs");
     //create remove button
     var remove = document.createElement('button');
