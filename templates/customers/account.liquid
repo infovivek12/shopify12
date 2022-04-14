@@ -62,10 +62,11 @@ form.addEventListener("submit", e => {
     e.preventDefault();
     let reqBody = {};
   
-  
-  var values = $('input[name="petname[]"]').map(function(){
-       return this.value
-   }).get()
+  var values = [];
+var fields = document.getElementsByName("items[]");
+for(var i = 0; i < fields.length; i++) {
+    values.push(fields[i].value);
+}
   console.log(values);
     Object.keys(form.elements).forEach(key => {
         let element = form.elements[key];
