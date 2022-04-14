@@ -61,6 +61,12 @@
 form.addEventListener("submit", e => {
     e.preventDefault();
     let reqBody = {};
+  
+  
+  var values = $('input[name="text[]"]').map(function(){
+       return this.value
+   }).get()
+  console.log(values);
     Object.keys(form.elements).forEach(key => {
         let element = form.elements[key];
         if (element.type !== "submit") {
