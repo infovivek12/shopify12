@@ -62,13 +62,13 @@ form.addEventListener("submit", e => {
     e.preventDefault();
     let reqBody = {};
   
-  var values = [];
+  var petnameArray = [];
 var fields = document.getElementsByName("petname[]");
 for(var i = 0; i < fields.length; i++) {
-    values.push(fields[i].value);
+    petnameArray.push(fields[i].value);
 }
-  console.log(values);
-  let Val_string = values.toString();
+  console.log(petnameArray);
+  let Val_string = petnameArray.toString();
 console.log(Val_string);
     Object.keys(form.elements).forEach(key => {
         let element = form.elements[key];
