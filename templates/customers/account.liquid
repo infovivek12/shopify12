@@ -57,6 +57,14 @@
      
      
 }
+   
+   function removeElement(ev) {
+  var button = ev.target;
+  var field = button.previousSibling;
+  var div = button.parentElement;
+  div.removeChild(button);
+  div.removeChild(field);
+};
 }
 else {
     console.log('not logged in');
