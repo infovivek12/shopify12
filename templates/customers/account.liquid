@@ -20,8 +20,15 @@
      <input type="hidden" name="store_id" id="store_id" value="{{shop.url | remove : 'https://'}}">
       <input type="submit" value="Submit">
     </form>
+    
+    
 <script>
- 
+ if (document.getElementsByClassName('wvt_get_customerId').length) {
+    alert('Class exists');
+}
+else {
+    alert('Class does not exist');
+}
 </script>
 
     
