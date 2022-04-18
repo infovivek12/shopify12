@@ -15,7 +15,35 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
+    
 
+
+     <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i' | asset_url | stylesheet_tag }}">
+
+  <!-- Vendor CSS Files -->
+   {{ 'aos.css' | asset_url | stylesheet_tag }}
+   {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
+ {{ 'bootstrap-icons.css' | asset_url | stylesheet_tag }}
+   {{ 'boxicons.min.css' | asset_url | stylesheet_tag }}
+   {{ 'glightbox.min.css' | asset_url | stylesheet_tag }}
+  {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+
+  <!-- Template Main CSS File -->
+  {{ 'style.css' | asset_url | stylesheet_tag }}
+ {{ 'base.css' | asset_url | stylesheet_tag }}
+    <style>
+      
+      .w3-input.w3-border {
+    width: 50%;
+}
+      
+    </style>
+    
+    
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -216,12 +244,22 @@
 
     {% section 'announcement-bar' %}
     {% section 'header' %}
+    
+    
+  
+    
+    
+    
+    
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
 
     {% section 'footer' %}
-
+    
+    
+    
+    
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
     </ul>
@@ -257,5 +295,32 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+   
+    
+    
+    
+    
+    <script>
+//   let postbtn= document.getElementById("cus_form");
+// postbtn.addEventListener('click',postclickHandler)
+
+// function postclickHandler(event){
+//   event.preventDefault();
+//   // var get = document.getElementById("wvt_post");
+//   // var gettext = get.textContent;
+//      //console.log(gettext);
+
+//      var get_age = document.getElementById("customer_age").value;
+//      var get_country = document.getElementById("customer_country").value;
+//      var get_pet = document.getElementById("customer_pet").value;
+//      var get_customerId = document.getElementById("customer_id").value;
+//    console.log(get_age);
+// }
+      
+      
+    </script>
+    
+
   </body>
 </html>
