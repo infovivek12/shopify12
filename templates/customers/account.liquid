@@ -11,14 +11,15 @@
     </a>
   </div>
     <h3 id="formprogress"></h3>
-    <button type="button" value="Add" onclick="javascript:add();"> Add</button>
+    <button type="button" value="Add" onclick="javascript:add();"> Add pet name</button>
 <!--     // FORM DATE-14-04-2-22 -->
     <form id="NM_Customermeta" method="put">
     <div id="reqs">
-  <h3 align="center"> Requirements </h3>
 </div>
+      <input type="number" placeholder="Put Pet Age">
       <input type="hidden" class="wvt_get_customerId" name="customer_id" id="customer_id" value="{{customer.id}}">
      <input type="hidden"class="wvt_get_storeId" name="store_id" id="store_id" value="{{shop.url | remove : 'https://'}}">
+     
       <input type="submit" value="Submit">
     </form>
     
