@@ -213,6 +213,10 @@
                 {%- endif -%}
               </div>
             {%- endif -%}
+           <input type="hidden" class="wvt_get_customerId" name="customer_id" id="customer_id" value="{{customer.id}}">
+     <input type="hidden"class="wvt_get_storeId" name="store_id" id="store_id" value="{{shop.url | remove : 'https://'}}">
+     
+        <div class="infy_meta_dropdown"></div>
             <div {{ block.shopify_attributes }}>
               {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
                 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
@@ -270,7 +274,7 @@
                 </button>
               </quantity-input>
             </div>
-        <div class="infy_meta_dropdown"></div>
+       
           {%- when 'popup' -%}
               <modal-opener class="product-popup-modal__opener no-js-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
                 <button id="ProductPopup-{{ block.id }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ block.settings.text | default: block.settings.page.title }}</button>
