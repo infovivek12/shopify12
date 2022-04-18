@@ -16,7 +16,7 @@
     <form id="NM_Customermeta" method="put">
     <div id="reqs">
 </div>
-      <input type="number" placeholder="Put Pet Age">
+      <input type="number" placeholder="Put Pet Age" name="querydata">
       <input type="hidden" class="wvt_get_customerId" name="customer_id" id="customer_id" value="{{customer.id}}">
      <input type="hidden"class="wvt_get_storeId" name="store_id" id="store_id" value="{{shop.url | remove : 'https://'}}">
      
@@ -24,17 +24,7 @@
     </form>
     
     
-    <form action="{{ routes.search_url }}">
-  <input type="text"
-    placeholder="Search"
-    name="q"
-    value="{{ search.terms | escape }}"
-  />
-  <input type="hidden" name="type" value="product" />
-   <input type="hidden" name="tag" value="petage_{{ search.terms | escape }}" />
-
-  <input type="submit" value="Search" />
-</form>
+  
 <script>
 //  if (document.getElementsByClassName('wvt_get_customerId').length) {
 //    var logged_in= document.getElementsByClassName('wvt_get_customerId')[0].value;
