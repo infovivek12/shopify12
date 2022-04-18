@@ -31,7 +31,7 @@
     value="{{ search.terms | escape }}"
   />
   <input type="hidden" name="type" value="product" />
-   <input type="hidden" name="tag" value="product" />
+   <input type="hidden" name="tag" value="petage_{{ search.terms | escape }}" />
 
   <input type="submit" value="Search" />
 </form>
