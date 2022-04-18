@@ -35,6 +35,15 @@
   <!-- Template Main CSS File -->
   {{ 'style.css' | asset_url | stylesheet_tag }}
  {{ 'base.css' | asset_url | stylesheet_tag }}
+    <style>
+      
+      .w3-input.w3-border {
+    width: 50%;
+}
+      
+    </style>
+    
+    
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
